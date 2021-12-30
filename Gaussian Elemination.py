@@ -18,9 +18,9 @@ def Aug(A,B):
         Ag[i][len(B)]=B[i][0]
     return Ag
 def pivot_func(A,step):
-    temp=abs(A[0][0])
-    pivot_row=0;
-    for i in range (len(A)):
+    temp=abs(A[step-1][0])
+    pivot_row=step-1;
+    for i in range (pivot_row,len(A)):
         for j in range (len(A[0]-1)):
             if(temp<abs(A[i][j])):
                 temp=abs(A[i][j])
